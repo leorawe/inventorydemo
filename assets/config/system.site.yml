@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: 6529f95a-40a9-4d29-9459-ce9801e05ee0
+name: 'Inventory Dev'
+mail: web@leoraw.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/42
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

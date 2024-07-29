@@ -1,0 +1,24 @@
+uuid: 03d4a126-e46f-49d5-b148-5a44e1b2be03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - filter.format.restricted_html
+    - node.type.stock
+  module:
+    - text
+id: node.stock.field_notes
+field_name: field_notes
+entity_type: node
+bundle: stock
+label: Notes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

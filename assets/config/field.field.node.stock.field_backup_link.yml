@@ -1,0 +1,23 @@
+uuid: 180d6fb4-436c-4520-918e-8fb41ce9db3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_backup_link
+    - node.type.stock
+  module:
+    - link
+id: node.stock.field_backup_link
+field_name: field_backup_link
+entity_type: node
+bundle: stock
+label: 'Backup Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 16
+field_type: link

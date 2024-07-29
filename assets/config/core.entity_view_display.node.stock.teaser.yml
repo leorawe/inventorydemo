@@ -1,0 +1,30 @@
+uuid: 4be9f011-7505-45eb-94ff-0f2b6e05d3a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stock.field_backup_link
+    - field.field.node.stock.field_item
+    - field.field.node.stock.field_notes
+    - field.field.node.stock.field_order_link
+    - field.field.node.stock.field_type
+    - node.type.stock
+  module:
+    - user
+id: node.stock.teaser
+targetEntityType: node
+bundle: stock
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_backup_link: true
+  field_item: true
+  field_notes: true
+  field_order_link: true
+  field_type: true

@@ -1,0 +1,9 @@
+uuid: 6600074a-d6a6-4ee4-a67e-20859bf7d3d2
+langcode: en
+status: true
+dependencies: {  }
+name: Type
+vid: type
+description: 'Type of stock item'
+weight: 0
+new_revision: false

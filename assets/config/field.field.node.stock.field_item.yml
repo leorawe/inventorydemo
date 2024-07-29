@@ -1,0 +1,19 @@
+uuid: c2aefd88-7885-4fa0-884e-4b4d1daaf095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_item
+    - node.type.stock
+id: node.stock.field_item
+field_name: field_item
+entity_type: node
+bundle: stock
+label: item
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

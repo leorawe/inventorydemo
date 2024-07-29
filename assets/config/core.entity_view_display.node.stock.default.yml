@@ -1,0 +1,72 @@
+uuid: d8e89809-64e7-4d61-a6d5-d0c0198faad2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stock.field_backup_link
+    - field.field.node.stock.field_item
+    - field.field.node.stock.field_notes
+    - field.field.node.stock.field_order_link
+    - field.field.node.stock.field_type
+    - node.type.stock
+  module:
+    - link
+    - text
+    - user
+id: node.stock.default
+targetEntityType: node
+bundle: stock
+mode: default
+content:
+  field_backup_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_item:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_notes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_order_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
