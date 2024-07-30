@@ -1,3 +1,3 @@
-### About this repository
+### Demo of Inventory
 
-Something intelligent will be written here soon.  
+Stock is a content type. Type is a taxonomy. Working on adding search to the site.  
