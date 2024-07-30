@@ -45,3 +45,7 @@ sites/all/modules/README.txt
 sites/all/themes/README.txt
 
 .editorconfig
+.gitattributes
+/composer.json
+/composer.lock
+*.sql.gz
