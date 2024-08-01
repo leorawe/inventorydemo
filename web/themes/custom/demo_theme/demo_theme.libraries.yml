@@ -56,7 +56,7 @@ global-styling:
     - core/drupal
     - core/once
     - core/tabbable
-    - olivero/navigation-base
+    - demo_theme/navigation-base
 
 book:
   version: VERSION
@@ -125,7 +125,7 @@ drupal.message:
   js:
     js/message.theme.js: {}
   dependencies:
-    - olivero/messages
+    - demo_theme/messages
 
 drupal.node.preview:
   version: VERSION
@@ -157,7 +157,7 @@ layout_builder_fourcol_section:
     layout:
       css/layout/layout-builder-fourcol-section.css: {}
   dependencies:
-    - olivero/layout_discovery_section
+    - demo_theme/layout_discovery_section
 
 layout_builder_threecol_section:
   version: VERSION
@@ -165,7 +165,7 @@ layout_builder_threecol_section:
     layout:
       css/layout/layout-builder-threecol-section.css: {}
   dependencies:
-    - olivero/layout_discovery_section
+    - demo_theme/layout_discovery_section
 
 layout_builder_twocol_section:
   version: VERSION
@@ -173,7 +173,7 @@ layout_builder_twocol_section:
     layout:
       css/layout/layout-builder-twocol-section.css: {}
   dependencies:
-    - olivero/layout_discovery_section
+    - demo_theme/layout_discovery_section
 
 layout_discovery_section:
   version: VERSION
@@ -210,7 +210,7 @@ messages:
   js:
     js/messages.js: {}
   dependencies:
-    - olivero/global-styling
+    - demo_theme/global-styling
 
 navigation-base:
   version: VERSION
@@ -273,7 +273,7 @@ search-wide:
   js:
     js/search.js: {}
   dependencies:
-    - olivero/navigation-primary
+    - demo_theme/navigation-primary
 
 sidebar:
   version: VERSION
