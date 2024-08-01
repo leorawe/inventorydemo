@@ -4,7 +4,6 @@
 /web/core/
 /web/modules/
 /web/modules/contrib/
-/web/themes/
 /web/themes/contrib/
 /web/profiles/
 /web/profiles/contrib/
@@ -26,6 +25,8 @@
 /.vscode/
 *.iml
 *.code-workspace
+.DS_Store
+web/.DS_Store
 
 # Ignore all log files
 *.log

@@ -1,0 +1,20 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ *
+ * The Powered by Drupal block is an optional link to the home page of the
+ * Drupal project.
+ *
+ */
+#}
+{% block content %}
+  {{ attach_library('demo_theme/powered-by-block') }}
+  <span>
+    {% trans %}Powered by{% endtrans %}
+    <a href="https://www.drupal.org">{% trans %}Drupal{% endtrans %}</a>
+    <span class="drupal-logo" role="img" aria-label="{{ 'Drupal Logo'|t }}">
+      {% include "@demo_theme/../images/drupal.svg" %}
+    </span>
+  </span>
+{% endblock %}
