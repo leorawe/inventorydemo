@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_backup_link
+    - field.storage.node.field_item
     - field.storage.node.field_notes
     - field.storage.node.field_order_link
     - field.storage.node.field_type
@@ -31,15 +32,13 @@ display:
     display_options:
       title: 'Inventory List'
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_item:
+          id: field_item
+          table: node__field_item
+          field: field_item
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: field
           label: ''
           exclude: false
@@ -61,8 +60,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -70,7 +69,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
+          element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -83,9 +82,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: basic_string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -567,6 +565,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_backup_link'
+        - 'config:field.storage.node.field_item'
         - 'config:field.storage.node.field_notes'
         - 'config:field.storage.node.field_order_link'
   block_1:
@@ -644,6 +643,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_backup_link'
+        - 'config:field.storage.node.field_item'
         - 'config:field.storage.node.field_notes'
         - 'config:field.storage.node.field_order_link'
   block_2:
