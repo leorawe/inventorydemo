@@ -2,6 +2,8 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   admin_toolbar: 0
+  admin_toolbar_search: 0
+  admin_toolbar_tools: 0
   announcements_feed: 0
   automated_cron: 0
   big_pipe: 0
@@ -15,6 +17,7 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  demo_search: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -34,6 +37,8 @@ module:
   path: 0
   path_alias: 0
   search: 0
+  search_api: 0
+  search_api_typesense: 0
   shortcut: 0
   system: 0
   taxonomy: 0
