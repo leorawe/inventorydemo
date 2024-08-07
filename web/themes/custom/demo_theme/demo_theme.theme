@@ -19,3 +19,13 @@ function demo_theme_preprocess_image_widget(array &$variables) {
     unset($data['preview']);
   }
 }
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function demo_theme_page_attachments_alter(array &$attachments) {
+  // Use the dev library if we're developing locally.
+  if (in_array('demo_theme/react_app', $attachments['#attached']['library']) && file_exists(__DIR__ . '/js/dist_dev')) {
+    $index = array_search('demo_theme/react_app', $attachments['#attached']['library']);
+    $attachments['#attached']['library'][$index] = 'demo_theme/react_app_dev';
+  }
+}

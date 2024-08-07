@@ -58,6 +58,16 @@ global-styling:
     - core/tabbable
     - demo_theme/navigation-base
 
+react_app:
+  version: VERSION
+  js:
+    js/dist/main.min.js: {minified: true}
+
+react_app_dev:
+  version: VERSION
+  js:
+    js/dist_dev/main.min.js: {minified: true}
+
 book:
   version: VERSION
   css:

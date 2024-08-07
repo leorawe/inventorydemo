@@ -70,3 +70,4 @@ sites/all/themes/README.txt
 /web/sites/development.services.yml
 /web/update.php
 /web/web.config
+/web/themes/custom/demo_theme/js/dist_dev
