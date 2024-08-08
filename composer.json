@@ -23,6 +23,7 @@
         "drupal/csv_importer": "^1.16",
         "drupal/pathauto": "^1.13",
         "drupal/search_api": "^1.35",
+        "drupal/search_api_algolia": "^3.0@beta",
         "drush/drush": "^12.5"
     },
     "conflict": {
