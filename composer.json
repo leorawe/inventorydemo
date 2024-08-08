@@ -22,7 +22,7 @@
         "drupal/core-recommended": "^10.3",
         "drupal/csv_importer": "^1.16",
         "drupal/pathauto": "^1.13",
-        "drupal/search_api_typesense": "1.0.x-dev@dev",
+        "drupal/search_api": "^1.35",
         "drush/drush": "^12.5"
     },
     "conflict": {
