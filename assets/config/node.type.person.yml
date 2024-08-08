@@ -1,0 +1,18 @@
+uuid: 4b9d15c7-62b1-4fe5-b64d-515d2d5e18c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Person
+type: person
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false
