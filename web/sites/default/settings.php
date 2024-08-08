@@ -880,6 +880,12 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
   include __DIR__ . '/settings.ddev.php';
 }
 
+// Algolia config overrides.
+$config['search_api.server.dev_algolia'] = [
+  'application_id' => getenv('APP_ID'),
+  'api_key' => getenv('API_KEY'),
+];
+
 /**
  * Load local development override configuration, if available.
  *
