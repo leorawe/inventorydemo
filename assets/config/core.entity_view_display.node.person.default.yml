@@ -20,23 +20,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
-    region: content
-  field_first_name:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     weight: 1
-    region: content
-  field_last_name:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
     region: content
   links:
     settings: {  }
@@ -44,4 +28,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_first_name: true
+  field_last_name: true
   search_api_excerpt: true
