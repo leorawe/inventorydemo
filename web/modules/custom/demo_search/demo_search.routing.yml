@@ -1,0 +1,7 @@
+demo_search.controller_view:
+  path: '/bob'
+  defaults:
+    _controller: '\Drupal\demo_search\Controller\DemoSearchController::show'
+    _title: 'Search'
+  requirements:
+    _permission: 'access content'

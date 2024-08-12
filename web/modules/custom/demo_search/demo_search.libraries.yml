@@ -1,0 +1,4 @@
+demo_search:
+  version: VERSION
+  js:
+    js/dist/main.min.js: {minified: true}

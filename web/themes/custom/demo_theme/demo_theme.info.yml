@@ -4,7 +4,6 @@ type: theme
 version: 1.0.0
 libraries:
   - demo_theme/global-styling
-  - demo_theme/react_app
   - demo_theme/messages
   - core/normalize
 regions:

@@ -1,5 +1,7 @@
 name: Demo Search
-description: Tools to set up search.
+description: Attach React apps for search.
 package: Custom
 type: module
-core_version_requirement: ^10 
+core_version_requirement: ^10 || ^11
+libraries:
+  - demo_search/demo_search
