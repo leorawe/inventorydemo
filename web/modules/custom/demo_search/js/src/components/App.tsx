@@ -9,7 +9,8 @@ import { history } from 'instantsearch.js/es/lib/routers';
 
 
 // import { Autocomplete, Hit } from './components';
-import { Hit } from './Hit'
+import { Hit } from './Hit';
+import './App.css';
 import {
   INSTANT_SEARCH_INDEX_NAME
 } from '../constants';
@@ -35,17 +36,16 @@ function App() {
         }}
         routing={routing}
       >
-        <header className="header">
-          <div className="header-wrapper wrapper">
-            <SearchBox></SearchBox>
-            {/* <Autocomplete
+        <div>
+          <SearchBox></SearchBox>
+          {/* <Autocomplete
               searchClient={searchClient}
               placeholder="Search products"
               detachedMediaQuery="none"
               openOnFocus
             /> */}
-          </div>
-        </header>
+        </div>
+
 
         <Configure
           attributesToSnippet={['name:7', 'description:15']}

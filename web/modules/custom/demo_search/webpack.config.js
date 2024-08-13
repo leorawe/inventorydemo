@@ -32,6 +32,13 @@ const config = {
         include: path.join(__dirname, 'js/src'),
       },
       { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
     ],
   }
 };
