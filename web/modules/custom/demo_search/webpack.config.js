@@ -1,5 +1,6 @@
 const path = require('path');
 const isDevMode = process.env.NODE_ENV !== 'production';
+// const Dotenv = require('dotenv-webpack');
 
 const config = {
   entry: {
@@ -12,7 +13,15 @@ const config = {
     filename: '[name].min.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensionAlias: {
+      ".js": [".js", ".ts"],
+      ".cjs": [".cjs", ".cts"]
+    }
+  },
+  performance: {
+    maxEntrypointSize: 800000,
+    maxAssetSize: 800000
   },
   module: {
     rules: [
@@ -21,9 +30,10 @@ const config = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         include: path.join(__dirname, 'js/src'),
-      }
+      },
+      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
     ],
-  },
+  }
 };
 
 module.exports = config;

@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
+import App from './components/App'
 
 // Define Main as a functional component
 const Main = () => (
   <>
-
     {
-      <div>Search Goes Here To Be Continued</div>
+      <App></App>
+    }
+    {
+      <div>Search To Be Continued</div>
     }
   </>
 );

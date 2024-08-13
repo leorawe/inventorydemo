@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "js/src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "lib": [
+    "es2015"
+  ]
+}
