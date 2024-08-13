@@ -53,6 +53,8 @@ sites/all/themes/README.txt
 /composer.json
 /composer.lock
 *.sql.gz
+*.env
+*.env.*
 
 # ignore web files
 /web/.csslintrc

@@ -84,7 +84,7 @@ export function Autocomplete({
           },
           templates: {
             item({ item, components }) {
-              console.log(item)
+              // console.log(item)
               return (
                 <a href={item.objectID} className="aa-ItemLink">
                   <div className="aa-ItemContent">
@@ -115,7 +115,6 @@ export function Autocomplete({
       initialState: { query },
       insights: false,
       plugins,
-      debug: true,
       onReset() {
         setInstantSearchUiState({ query: '' });
       },

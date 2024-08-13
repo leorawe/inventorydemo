@@ -1,6 +1,7 @@
 const path = require('path');
 const isDevMode = process.env.NODE_ENV !== 'production';
-// const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
+require('dotenv').config({ path: './.env' });
 
 const config = {
   entry: {
@@ -12,6 +13,11 @@ const config = {
     path: isDevMode ? path.resolve(__dirname, "js/dist") : path.resolve(__dirname, "js/dist"),
     filename: '[name].min.js'
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     extensionAlias: {
