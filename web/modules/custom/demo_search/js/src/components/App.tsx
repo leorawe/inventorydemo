@@ -3,6 +3,7 @@ import {
   Configure,
   Hits,
   InstantSearch,
+  Pagination,
   SearchBox
 } from 'react-instantsearch';
 import { history } from 'instantsearch.js/es/lib/routers';
@@ -16,11 +17,8 @@ import {
 } from '../constants';
 
 function App() {
-  const searchClient = algoliasearch(
-    'latency',
-    '6be0576ff61c053d5f9a3225e2a90f76'
-  );
-  // const searchClient = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_API_KEY);
+
+  const searchClient = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_API_KEY);
   const routing = {
     router: history({
       cleanUrlOnDispose: false,
@@ -39,7 +37,7 @@ function App() {
         <div>
           <Autocomplete
             searchClient={searchClient}
-            placeholder="Search products"
+            placeholder="Search"
             detachedMediaQuery="none"
             openOnFocus
           />
@@ -54,6 +52,7 @@ function App() {
 
           <div>
             <Hits hitComponent={Hit} />
+            <Pagination />
           </div>
         </div>
       </InstantSearch>

@@ -2,18 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/App'
 
-// Define Main as a functional component
-const Main = () => (
-  <>
-    {
-      <App></App>
-    }
-    {
-      <div>Search To Be Continued</div>
-    }
-  </>
-);
-
 // Get the container for your app
 const container = document.getElementById('demo-search');
 
@@ -23,7 +11,7 @@ if (container) {
   const root = ReactDOM.createRoot(container);
 
   // Render the Main component
-  root.render(<Main />);
+  root.render(<App />);
 } else {
   console.error('Failed to find the root element');
 }

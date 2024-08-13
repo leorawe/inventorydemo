@@ -65,3 +65,17 @@ button.ais-SearchBox-submit {
   justify-content: center;
   margin: 2rem 0;
 }
+
+.ais-Pagination-list {
+  list-style: none;
+  display: flex;
+}
+
+.aa-ItemLink {
+  border-bottom: 1px solid grey;
+}
+
+.hitItem {
+  padding: 20px 0;
+  border-bottom: 1px solid #efefef;
+}

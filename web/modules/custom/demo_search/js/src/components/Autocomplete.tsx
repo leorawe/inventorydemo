@@ -19,6 +19,9 @@ import {
 import { autocomplete } from '@algolia/autocomplete-js';
 import { createQuerySuggestionsPlugin } from '@algolia/autocomplete-plugin-query-suggestions';
 import { debounce } from '@algolia/autocomplete-shared';
+import {
+  INSTANT_SEARCH_INDEX_NAME
+} from '../constants';
 
 import '@algolia/autocomplete-theme-classic';
 
@@ -29,7 +32,6 @@ type AutocompleteProps = Partial<AutocompleteOptions<BaseItem>> & {
 
 type SetInstantSearchUiStateOptions = {
   query: string;
-  category?: string;
 };
 
 export function Autocomplete({
@@ -60,7 +62,7 @@ export function Autocomplete({
   const plugins = useMemo(() => {
     const querySuggestions = createQuerySuggestionsPlugin({
       searchClient,
-      indexName: 'instant_search_demo_query_suggestions',
+      indexName: INSTANT_SEARCH_INDEX_NAME,
       getSearchParams({ state }) {
         return { hitsPerPage: state.query ? 5 : 10 };
       },
@@ -71,7 +73,6 @@ export function Autocomplete({
           onSelect({ item }) {
             setInstantSearchUiState({
               query: item.query,
-              category: item.__autocomplete_qsCategory || '',
             });
           },
           getItems(params) {
@@ -82,9 +83,19 @@ export function Autocomplete({
             return source.getItems(params);
           },
           templates: {
-            ...source.templates,
-            header() {
-              return <Fragment />;
+            item({ item, components }) {
+              console.log(item)
+              return (
+                <a href={item.objectID} className="aa-ItemLink">
+                  <div className="aa-ItemContent">
+                    <div className="aa-ItemContentBody">
+                      <div className="aa-ItemContentTitle">
+                        {/* {item.title} */}
+                        {/* <components.Snippet hit={item} attribute="query" /> */}
+                      </div>
+                    </div>
+                  </div>
+                </a>);
             }
           }
         }
@@ -102,8 +113,9 @@ export function Autocomplete({
       ...autocompleteProps,
       container: autocompleteContainer.current,
       initialState: { query },
-      insights: true,
+      insights: false,
       plugins,
+      debug: true,
       onReset() {
         setInstantSearchUiState({ query: '' });
       },
