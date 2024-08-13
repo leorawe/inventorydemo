@@ -8,7 +8,7 @@ import {
 import { history } from 'instantsearch.js/es/lib/routers';
 
 
-// import { Autocomplete, Hit } from './components';
+import { Autocomplete } from './Autocomplete';
 import { Hit } from './Hit';
 import './App.css';
 import {
@@ -37,13 +37,12 @@ function App() {
         routing={routing}
       >
         <div>
-          <SearchBox></SearchBox>
-          {/* <Autocomplete
-              searchClient={searchClient}
-              placeholder="Search products"
-              detachedMediaQuery="none"
-              openOnFocus
-            /> */}
+          <Autocomplete
+            searchClient={searchClient}
+            placeholder="Search products"
+            detachedMediaQuery="none"
+            openOnFocus
+          />
         </div>
 
 
