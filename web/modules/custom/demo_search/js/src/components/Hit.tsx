@@ -9,10 +9,10 @@ type HitProps = {
 };
 
 export function Hit({ hit }: HitProps) {
-  console.log(hit)
+  const link: string = hit.objectID.replace('entity:', '').replace(':en', '');
   return (
     <article className="hitItem">
-      <div><a href={hit.objectID}>{hit.title}</a></div>
+      <div><a href={link}>{hit.title}</a></div>
       <div>{hit.rendered_item}</div>
     </article>
   );
