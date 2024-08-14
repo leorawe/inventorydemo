@@ -7,9 +7,6 @@ import {
   SearchBox
 } from 'react-instantsearch';
 import { history } from 'instantsearch.js/es/lib/routers';
-
-
-import { Autocomplete } from './Autocomplete';
 import { Hit } from './Hit';
 import './App.css';
 import {
@@ -34,21 +31,15 @@ function App() {
         routing={routing}
       >
         <div>
-          <Autocomplete
-            searchClient={searchClient}
-            placeholder="Search"
-            detachedMediaQuery="none"
-            openOnFocus
+          <SearchBox
+            placeholder='Search'
           />
         </div>
-
-
         <Configure
-          attributesToSnippet={['name:7', 'description:15']}
+          attributesToSnippet={['title:7', 'description:15']}
           snippetEllipsisText="…"
         />
-        <div className="container wrapper">
-
+        <div className="hits-container">
           <div>
             <Hits hitComponent={Hit} />
             <Pagination />

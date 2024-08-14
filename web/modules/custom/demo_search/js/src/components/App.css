@@ -5,26 +5,48 @@
 /* InstantSearch */
 
 .ais-SearchBox-form {
-  display: flex;
+  position: relative;
+  display: block;
 }
 
 .ais-SearchBox-input {
   color: #666;
-  background: #fff;
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  display: block;
-  padding: 0.7em;
+  appearance: none;
+  padding: .3rem 1.7rem;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #c4c8d8;
+  border-radius: 5px;
 }
 
-button.ais-SearchBox-submit {
-  padding: 0.5em 1em;
-  height: 44px;
-  width: 44px;
+[class^=ais-] {
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.ais-SearchBox-submit {
+  left: .3rem;
+}
+
+.ais-SearchBox-submitIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.ais-SearchBox-loadingIndicator,
+.ais-SearchBox-reset,
+.ais-SearchBox-submit {
+  display: none;
+}
+
+.hits-container {
+  padding: 0;
 }
 
 .ais-Hits-list {
   list-style-type: none;
+  padding-left: 5px;
 }
 
 .hit {
