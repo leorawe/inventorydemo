@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.person.body
     - field.field.node.person.field_first_name
+    - field.field.node.person.field_ismember
     - field.field.node.person.field_last_name
     - node.type.person
   module:
@@ -21,6 +22,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_ismember:
+    type: boolean
+    label: inline
+    settings:
+      format: yes-no
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }

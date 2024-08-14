@@ -9,6 +9,6 @@ name: 'Dev Algolia'
 description: ''
 backend: search_api_algolia
 backend_config:
-  application_id: 'x'
-  api_key: 'y'
+  application_id: 'y'
+  api_key: x
   disable_truncate: 0

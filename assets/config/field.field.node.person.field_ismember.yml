@@ -1,0 +1,23 @@
+uuid: 1918552f-356c-405f-a823-500fa708fb32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ismember
+    - node.type.person
+id: node.person.field_ismember
+field_name: field_ismember
+entity_type: node
+bundle: person
+label: IsMember
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.person.body
     - field.field.node.person.field_first_name
+    - field.field.node.person.field_ismember
     - field.field.node.person.field_last_name
     - node.type.person
   module:
@@ -38,6 +39,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_ismember:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_last_name:
     type: string_textfield

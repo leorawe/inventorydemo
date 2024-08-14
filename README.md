@@ -1,4 +1,4 @@
-### About this Demo Repository for Demonstrating Algolia Search. 
+# About this Demo of Algolia Search. 
 
 ## Demo Search module. 
 Demo Search (demo_search) is a custom Drupal module to show Algolia search on a website. You would have to tweak the module to get it to work for your site. You would also need to sign up for an Algolia account.  
