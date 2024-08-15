@@ -1,0 +1,29 @@
+uuid: 0707003c-00e9-495c-abba-7ee551c2fe0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.inventory_list
+  module:
+    - system
+    - views
+  theme:
+    - demo_subtheme
+id: demo_subtheme_views_block__inventory_list_block_2
+theme: demo_subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:inventory_list-block_2'
+settings:
+  id: 'views_block:inventory_list-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /grouped
