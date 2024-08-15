@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Olivero specific CSS overrides.
+ */
+
+ .site-header .site-header__initial {
+   background-color: #800000;
+ }
+
+ .site-header .site-branding {
+  background-image: linear-gradient(160deg, var(--color--gray-45) 0%, var(--color--gray-20) 78.66%);
+ }
