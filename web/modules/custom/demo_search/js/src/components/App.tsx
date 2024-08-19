@@ -12,8 +12,11 @@ import './App.css';
 import {
   INSTANT_SEARCH_INDEX_NAME
 } from '../constants';
+import React, { useState } from 'react';
 
 function App() {
+  const [queryResults, setQueryResults] = useState(false);
+  const [resultsKey, setResultsKey] = useState(0);
   const searchClient = algoliasearch(process.env.REACT_APP_ALGOLIA_APP_ID, process.env.REACT_APP_ALGOLIA_API_KEY);
   const routing = {
     router: history({
@@ -28,6 +31,16 @@ function App() {
         future={{
           preserveSharedStateOnUnmount: true,
         }}
+        onStateChange={({ uiState }) => {
+          if (uiState && uiState[INSTANT_SEARCH_INDEX_NAME].query &&
+            uiState[INSTANT_SEARCH_INDEX_NAME].query.length > (0)) {
+            setQueryResults(true);
+            setResultsKey(resultsKey + 1);
+          }
+          else {
+            setQueryResults(false);
+          }
+        }}
         routing={routing}
       >
         <div>
@@ -40,10 +53,12 @@ function App() {
           snippetEllipsisText="…"
         />
         <div className="hits-container">
-          <div>
-            <Hits hitComponent={Hit} />
-            <Pagination />
-          </div>
+          {queryResults ?
+            <div>
+              <Hits hitComponent={Hit} />
+              <Pagination />
+            </div>
+            : null}
         </div>
       </InstantSearch>
     </div>
